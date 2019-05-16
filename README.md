@@ -1,2 +1,2 @@
 # libft
-A recreation of function of standard library of C.
+Recreation of standard libray functions for C
