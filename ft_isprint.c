@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:28:43 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/22 12:31:30 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/22 15:20:27 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int     ft_isprint(int c)
     unsigned char res;
 
     res = (unsigned char)c;
-    if (res >= 32 && res <= 127)
+    if (res >= 32 && res <= 126)
         return (1);
     return (0);
 }
