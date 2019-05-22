@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/22 08:37:24 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/22 14:58:09 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,19 @@ CC = gcc
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC = ft_tolower.c
+SRC = ft_tolower.c \
+	  ft_toupper.c \
+	  ft_isprint.c \
+	  ft_isascii.c \
+	  ft_isalnum.c \
+	  ft_isdigit.c \
+	  ft_isalpha.c \
+	  ft_strlen.c \
+	  ft_strdup.c \
+	  ft_strcpy.c \
+	  ft_strncpy
 
-OBJ = ft_tolower.o
+OBJ = $(SRC:%.c=%.o)
 
 START: BUILD_LIB
 
@@ -34,10 +44,12 @@ NORM:
 clean:
 	rm -rf $(OBJ)
 
-fclean:
-	rm -rf *.a
+fclean: clean
+	rm -rf $(NAME)
 	rm -rf test
 
 run:
 	$(CC) $(FLAGS) $(NAME) main.c -o test
 	./test
+
+re: fclean START
