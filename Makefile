@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/22 14:58:09 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/24 09:59:15 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,19 +26,21 @@ SRC = ft_tolower.c \
 	  ft_strlen.c \
 	  ft_strdup.c \
 	  ft_strcpy.c \
-	  ft_strncpy
+	  ft_strncpy.c \
+	  ft_strcat.c \
+	  ft_strncat.c
 
 OBJ = $(SRC:%.c=%.o)
 
-START: BUILD_LIB
+all: build_lib
 
-BUILD_LIB: CREATE_OBJ
+build_lib: create_obj
 	ar -rcv $(NAME) $(OBJ)
 
-CREATE_OBJ:
+create_obj:
 	$(CC) $(FLAGS) -c $(SRC)
 
-NORM:
+norm:
 	norminette -R CheckForbiddenSourceHeader $(SRC) libft.h
 
 clean:
@@ -52,4 +54,4 @@ run:
 	$(CC) $(FLAGS) $(NAME) main.c -o test
 	./test
 
-re: fclean START
+re: fclean all
