@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/25 11:14:04 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/25 11:42:45 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC = ft_tolower.c \
 	  ft_memset.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
+	  ft_memccpy.c \
 	  ft_memmove.c \
 	  ft_memchr.c \
 	  ft_memcmp.c
