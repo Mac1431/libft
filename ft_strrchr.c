@@ -6,20 +6,27 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 21:41:58 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/24 21:52:09 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/28 07:30:45 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char *ret;
+	char *tmp;
 
-	ret = 0;
+	tmp = NULL;
+	if ((char)c == '\0')
+	{
+		tmp = (char *)s + ft_strlen(s);
+		return (tmp);
+	}
 	while (*s)
 	{
-		if (*s == c)
-			ret = (char *)s;
+		if (*s == (char)c)
+			tmp = (char *)s;
 		s++;
 	}
-	return (ret);
+	return (tmp);
 }

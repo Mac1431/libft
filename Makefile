@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/25 11:42:45 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/28 08:21:38 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC = ft_tolower.c \
 	  ft_isalnum.c \
 	  ft_isdigit.c \
 	  ft_isalpha.c \
+	  ft_atoi.c \
 	  ft_strlen.c \
 	  ft_strdup.c \
 	  ft_strcpy.c \
@@ -48,7 +49,7 @@ OBJ = $(SRC:%.c=%.o)
 all: build_lib
 
 build_lib: create_obj
-	ar -rcv $(NAME) $(OBJ)
+	ar -rc $(NAME) $(OBJ)
 
 create_obj:
 	$(CC) $(FLAGS) -c $(SRC)

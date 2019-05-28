@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:55:18 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/23 13:16:02 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/28 07:20:05 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ char    *ft_strncpy(char *dst, const char *src, size_t len)
         dst[index] = src[index];
         index++;
     }
-    dst[index] = '\0';
+    while (index < len)
+    {
+        dst[index] = '\0';
+        index++;
+    }
     return (dst);
 }
