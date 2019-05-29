@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/28 15:56:15 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/29 07:11:18 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,11 @@ SRC = ft_tolower.c \
 	  ft_putnbr.c \
 	  ft_putstr.c \
 	  ft_putendl.c \
-	  ft_itoa.c
+	  ft_memalloc.c \
+	  ft_memdel.c \
+	  ft_strnew.c \
+	  ft_strdel.c \
+	  ft_strclr.c \
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -59,6 +63,7 @@ all: build_lib
 
 build_lib: create_obj
 	ar -rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 create_obj:
 	$(CC) $(FLAGS) -c $(SRC)

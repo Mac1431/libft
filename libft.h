@@ -6,12 +6,12 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/29 06:57:51 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/29 11:00:42 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_H
-# define FT_LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>

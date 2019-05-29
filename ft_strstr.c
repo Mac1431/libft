@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:33:00 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/24 17:59:00 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/29 12:46:28 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char    *ft_strstr(const char *haystack, const char *needle)
         }
         i++;
     }
-    return (0);
+    return (NULL);
 }
