@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/28 10:02:23 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/28 15:53:47 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,5 @@ void    ft_putstr_fd(const char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
 void    ft_putendl(char const *s);
 void    ft_putendl_fd(char const *s, int fd);
+char    *ft_itoa(int n);
 #endif
