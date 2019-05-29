@@ -6,15 +6,15 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/28 15:53:47 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/29 06:57:51 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int     ft_tolower(int c);
 int     ft_toupper(int c);
@@ -38,7 +38,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int     ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-int	ft_atoi(const char *str);
+int     ft_atoi(const char *str);
 
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
