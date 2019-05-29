@@ -2,7 +2,7 @@
 
 void    ft_putstr(char const *s)
 {
-    if (s == 0)
+    if (!s)
         return ;
     while (*s != '\0')
     {
