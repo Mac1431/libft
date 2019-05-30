@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/05/29 15:20:27 by pmalope          ###   ########.fr        #
+#    Updated: 2019/05/30 15:53:13 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,11 @@ SRC = ft_tolower.c \
 	  ft_strnew.c \
 	  ft_strdel.c \
 	  ft_strclr.c \
+	  ft_striter.c \
+	  ft_striteri.c \
+	  ft_strmap.c \
+	  ft_strmapi.c \
+	  ft_add.c \
 
 OBJ = $(SRC:%.c=%.o)
 
