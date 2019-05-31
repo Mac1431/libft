@@ -1,0 +1,259 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
+/*   Updated: 2019/05/31 11:26:40 by pmalope          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include "libft.h"
+#define BUF 100
+
+void	ft_tolower_test(void)
+{
+	printf("ft_tolower -> %c\n", ft_tolower('A'));
+}
+
+void	ft_toupper_test(void)
+{
+	printf("ft_toupper -> %c\n", ft_toupper('a'));
+}
+
+void	ft_isprint_test(void)
+{
+	printf("ft_isprint -> %d\n", ft_isprint('%'));
+}
+
+void	ft_isascii_test(void)
+{
+	printf("ft_isascii -> %d\n", ft_isascii('@'));
+}
+
+void	ft_isalnum_test(void)
+{
+	printf("ft_isalnum -> %d\n", ft_isalnum('^'));
+}
+
+void	ft_isdigit_test(void)
+{
+	printf("ft_isdigit -> %d\n", ft_isdigit('1'));
+}
+
+void	ft_isalpha_test(void)
+{
+	printf("ft_isalpha -> %d\n", ft_isalpha('a'));
+}
+
+void	ft_strlen_test(void)
+{
+	printf("ft_strlen -> %zu\n", ft_strlen("Counting characters in a string!!!"));
+}
+
+void	ft_strdup_test(void)
+{
+	char	*ptr_newstr;
+
+	ptr_newstr = ft_strdup("I love what I'm doing!!!");
+	printf("ft_strdup -> %s\n", ptr_newstr);
+}
+
+void	ft_strcpy_test(void)
+{
+	char	dst[BUF];
+
+	ft_strcpy(dst, "Learning C");
+	printf("ft_strcpy -> %s\n", dst);
+}
+
+void	ft_strncpy_test(void)
+{
+	char	dst[BUF];
+
+	ft_strncpy(dst, "It is quite fun...", 15);
+	printf("ft_strncpy -> %s\n", dst);
+}
+
+void	ft_strcat_test(void)
+{
+	char	dst[BUF];
+	char	*joined_str;
+
+	ft_strcpy(dst, "My name ");
+	joined_str = ft_strcat(dst, "is Martina!!!");
+	printf("ft_strcat -> %s\n", joined_str);
+}
+
+void	ft_strncat_test(void)
+{
+	char	dst[BUF];
+	char	*joined_str;
+	
+	ft_strcpy(dst, "My original name ");
+	joined_str = ft_strncat(dst, "Phetho!!!!", 6);
+	printf("ft_strncat -> %s\n", joined_str);
+}
+
+void	ft_strlcat_test(void)
+{
+	char	dst[BUF];
+	size_t	joined_str_len;
+
+	ft_strcpy(dst, "We counting characters");
+	joined_str_len = ft_strlcat(dst, "using strlcat!!!", 13);
+	printf("ft_strlcat -> %zu\n", joined_str_len);
+}
+
+void	ft_strchr_test(void)
+{
+	char	str[BUF];
+	char	*ptr;
+
+	ft_strcpy(str, "Searching for the first occurrence of a character in this string");
+	ptr = ft_strchr(str, 'f');
+	printf("ft_strchr -> %s\n", ptr);
+
+}
+
+void	ft_strrchr_test(void)
+{
+	char	str[BUF];
+	char	*ptr;
+
+	ft_strcpy(str, "Searching for the last occurrence of a character in this string");
+	ptr = ft_strrchr(ptr, 'c');
+	printf("ft_strrchr -> %s\n", ptr);
+}
+
+void	ft_strstr_test(void)
+{
+	char	string[BUF];
+	char	*ptr;
+
+	ft_strcpy(string, "I'm looking for a substring in this string!!!");
+	ptr = ft_strstr(string, "looking");
+	printf("ft_strstr -> %s\n", ptr);
+}
+
+void	ft_strnstr_test(void)
+{
+	char	string[BUF];
+	char	*ptr;
+
+	ft_strcpy(string, "Looking for a substring in this string where not more than size of characters are searched!!");
+	ptr = ft_strnstr(string, "string", 6);
+	printf("ft_strnstr -> %s\n", ptr);
+}
+
+void	ft_strcmp_test(void)
+{
+	printf("ft_strcmp -> %d\n", ft_strcmp("Martian", "MartiAn"));
+}
+
+void	ft_strncmp_test(void)
+{
+	printf("ft_strncmp -> %d\n", ft_strncmp("MartiAn", "Martian", 6));
+}
+
+void	ft_atoi_test(void)
+{
+	printf("ft_atoi -> %d\n", ft_atoi("-1431"));
+}
+
+void	ft_memset_test(void)
+{
+	char	str[BUF];
+
+	ft_strcpy(str, "Martian");
+	ft_memset(str, '0', 3);
+	printf("ft_memset -> %c\n", str[0]);
+}
+
+void	ft_bzero_test(void)
+{
+	char	str[BUF];
+
+	ft_strcpy(str, "Martian");
+	ft_bzero(str, 5);
+	printf("ft_bzero -> %d\n", str[5]);
+}
+
+void	ft_memcpy_test(void)
+{
+	char	str[BUF];
+
+	ft_memcpy(str, "Martian", 3);
+	printf("ft_memcpy -> %s\n", str);
+}
+
+void	ft_memccpy_test(void)
+{
+	char	str[BUF];
+
+	ft_memccpy(str, "Martian of course", 'o', 25);
+	printf("ft_memccpy -> %s\n", str);
+
+}
+
+void	ft_memmove_test(void)
+{
+	char	str[BUF];
+
+	ft_memmove(str, "Martina", 2);
+	printf("ft_memmove -> %s\n", str);
+
+}
+
+void	ft_memchr_test(void)
+{
+	char	str[BUF];
+	char	*ptr;
+
+	ft_strcpy(str, "Searching for a character in this string");
+	ptr = ft_memchr(str, 'f', 20);
+	printf("ft_memchr -> %s\n", ptr);
+}
+
+void	ft_memcmp_test(void)
+{
+	printf("ft_memcmp -> %d\n", ft_memcmp("Martian", "Martian", 6));
+}
+
+int     main(void)
+{
+	ft_tolower_test();
+	ft_toupper_test();
+	ft_isprint_test();
+	ft_isascii_test();
+	ft_isalnum_test();
+	ft_isdigit_test();
+	ft_isalpha_test();
+
+	ft_strlen_test();
+	ft_strdup_test();
+	ft_strcpy_test();
+	ft_strncpy_test();
+	ft_strcat_test();
+	ft_strncat_test();
+	ft_strlcat_test();
+	ft_strchr_test();
+	ft_strrchr_test();
+	ft_strcmp_test();
+	ft_strncmp_test();
+
+	ft_atoi_test();
+
+	ft_memset_test();
+	ft_bzero_test();
+	ft_memcpy_test();
+	ft_memccpy_test();
+	ft_memmove_test();
+	ft_memchr_test();
+	ft_memcmp_test();
+	
+	return (0);
+}

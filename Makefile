@@ -61,7 +61,6 @@ SRC = ft_tolower.c \
 	  ft_striteri.c \
 	  ft_strmap.c \
 	  ft_strmapi.c \
-	  ft_add.c \
 
 OBJ = $(SRC:%.c=%.o)
 
