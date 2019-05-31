@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/31 11:26:40 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/05/31 16:07:38 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -223,6 +223,57 @@ void	ft_memcmp_test(void)
 	printf("ft_memcmp -> %d\n", ft_memcmp("Martian", "Martian", 6));
 }
 
+void	ft_memalloc_test(void)
+{
+	char	*newstr;
+
+	newstr = ft_memalloc(1);
+	ft_strcpy(newstr, "Allocating memory!!!!");
+	printf("ft_memalloc -> %s\n", newstr);
+}
+
+void	ft_memdel_test(void)
+{
+	char	delstr[100];
+
+//	delstr = ft_memalloc(10);
+	ft_strcpy(delstr, "Deleting memory");
+	printf("ft_memdel -> 'Before deleting memory' %s\n", delstr);
+	ft_memdel((void **)delstr);
+	printf("ft_memdel -> 'After deleting memory' %s\n", delstr);
+}
+
+void	ft_strnew_test(void)
+{
+	char	*newstr;
+
+	newstr = ft_strnew(1);
+	ft_strcpy(newstr, "Creating a string with strnew function");
+	printf("ft_strnew -> %s\n", newstr);
+}
+
+void	ft_strdel_test(void)
+{
+	char	tmp[100];
+
+//	tmp = ft_strnew(1);
+	ft_strcpy(tmp, "Deleting a string");
+	printf("ft_strdel -> 'Before deleting the string' %s\n", tmp);
+	ft_strdel((char **)tmp);
+	printf("ft_strdel -> 'After deleting the string' %s\n", tmp);
+}
+
+void	ft_strclr_test(void)
+{
+	char	*temp;
+
+	temp = ft_strnew(1);
+	ft_strcpy(temp, "Clearing the string");
+	printf("ft_strclr -> 'Before clearing the string' %s\n", temp);
+	ft_strclr(temp);
+	printf("ft_strclr -> 'After clearing the string' %s\n", temp);
+}
+
 int     main(void)
 {
 	ft_tolower_test();
@@ -254,6 +305,12 @@ int     main(void)
 	ft_memmove_test();
 	ft_memchr_test();
 	ft_memcmp_test();
+
+	ft_memalloc_test();
+	ft_memdel_test();
+	ft_strnew_test();
+	ft_strdel_test();
+	ft_strclr_test();
 	
 	return (0);
 }
