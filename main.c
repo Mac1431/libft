@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/31 16:07:38 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/01 14:38:45 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -234,12 +234,12 @@ void	ft_memalloc_test(void)
 
 void	ft_memdel_test(void)
 {
-	char	delstr[100];
+	char	*delstr;
 
-//	delstr = ft_memalloc(10);
+	delstr = ft_memalloc(10);
 	ft_strcpy(delstr, "Deleting memory");
 	printf("ft_memdel -> 'Before deleting memory' %s\n", delstr);
-	ft_memdel((void **)delstr);
+	ft_memdel((void *)&delstr);
 	printf("ft_memdel -> 'After deleting memory' %s\n", delstr);
 }
 
@@ -254,12 +254,12 @@ void	ft_strnew_test(void)
 
 void	ft_strdel_test(void)
 {
-	char	tmp[100];
+	char	*tmp;
 
-//	tmp = ft_strnew(1);
+	tmp = ft_memalloc(10);
 	ft_strcpy(tmp, "Deleting a string");
 	printf("ft_strdel -> 'Before deleting the string' %s\n", tmp);
-	ft_strdel((char **)tmp);
+	ft_strdel(&tmp);
 	printf("ft_strdel -> 'After deleting the string' %s\n", tmp);
 }
 
@@ -267,11 +267,35 @@ void	ft_strclr_test(void)
 {
 	char	*temp;
 
-	temp = ft_strnew(1);
+	temp = ft_strnew(10);
 	ft_strcpy(temp, "Clearing the string");
 	printf("ft_strclr -> 'Before clearing the string' %s\n", temp);
-	ft_strclr(temp);
+	ft_strclr((char *)&temp);
 	printf("ft_strclr -> 'After clearing the string' %s\n", temp);
+}
+
+void	ft_strequ_test(void)
+{
+}
+
+void	ft_strnequ_test(void)
+{
+}
+
+void	ft_strsub_test(void)
+{
+}
+
+void	ft_strjoin_test(void)
+{
+}
+
+void	ft_strtrim_test(void)
+{
+}
+
+void	ft_strsplit_test(void)
+{
 }
 
 int     main(void)
@@ -301,16 +325,23 @@ int     main(void)
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
-	ft_memccpy_test();
-	ft_memmove_test();
+//	ft_memccpy_test();
+//	ft_memmove_test();
 	ft_memchr_test();
 	ft_memcmp_test();
 
 	ft_memalloc_test();
 	ft_memdel_test();
 	ft_strnew_test();
-	ft_strdel_test();
-	ft_strclr_test();
+//	ft_strdel_test();
+//	ft_strclr_test();
+//
+//	ft_strequ_test();
+//	ft_strnequ_test();
+//	ft_strsub_test();
+//	ft_strjoin_test();
+//	ft_strtrim_test();
+//	ft_strsplit_test()
 	
 	return (0);
 }

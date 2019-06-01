@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/30 16:01:24 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/01 14:38:42 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,10 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /* Remove this function */
 void    ft_add(char *);
 /* Do not submit this ^ function */
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, const char *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 #endif
