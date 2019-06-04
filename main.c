@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/01 14:38:45 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/04 16:24:41 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ void	ft_strrchr_test(void)
 	char	*ptr;
 
 	ft_strcpy(str, "Searching for the last occurrence of a character in this string");
-	ptr = ft_strrchr(ptr, 'c');
+	ptr = ft_strrchr(str, 'c');
 	printf("ft_strrchr -> %s\n", ptr);
 }
 
@@ -194,17 +194,17 @@ void	ft_memccpy_test(void)
 {
 	char	str[BUF];
 
-	ft_memccpy(str, "Martian of course", 'o', 25);
+	ft_memccpy(str, "Martian of course", 'f', 17);
 	printf("ft_memccpy -> %s\n", str);
 
 }
 
 void	ft_memmove_test(void)
 {
-	char	str[BUF];
+	char	str_move[BUF];
 
-	ft_memmove(str, "Martina", 2);
-	printf("ft_memmove -> %s\n", str);
+	memmove(str_move, "Martina", 2);
+	printf("ft_memmove -> %s\n", str_move);
 
 }
 
@@ -276,26 +276,50 @@ void	ft_strclr_test(void)
 
 void	ft_strequ_test(void)
 {
+	printf("ft_strequ -> %d\n", ft_strequ("Martian", "MartiAn"));
 }
 
 void	ft_strnequ_test(void)
 {
+	printf("ft_strnequ -> %d\n", ft_strnequ("MacmIllian", "Macmillian", 4));
 }
 
 void	ft_strsub_test(void)
 {
+	char	*ptr_strsub;
+
+	ptr_strsub = ft_strsub("Macmillian or Martian is awesome!!", 14, 34);
+	printf("ft_strsub -> %s\n", ptr_strsub);
 }
 
 void	ft_strjoin_test(void)
 {
+	char	str_tojoin[BUF];
+	char	str_joinwith[BUF];
+	char	*ptr_strjoin;
+
+	ft_strcpy(str_tojoin, "Programming is fun!!! ");
+	ft_strcpy(str_joinwith, "Ask Martian");
+	ptr_strjoin = ft_strjoin(str_tojoin, str_joinwith);
+	printf("ft_strjoin -> %s\n", ptr_strjoin);
 }
 
 void	ft_strtrim_test(void)
 {
+	char	*ptr_strtrim;
+
+	ptr_strtrim = ft_strtrim("    Martian is a God      ");
+	printf("ft_strtrim -> %s\n", ptr_strtrim);
 }
 
 void	ft_strsplit_test(void)
 {
+	char	s1[BUF];
+	char	**tab;
+
+	ft_strcpy(s1, "Martian Macmillian Malope Phetho");
+	tab = ft_strsplit(s1, ' ');
+	printf("ft_strsplit -> %c", *(*(tab)));
 }
 
 int     main(void)
@@ -325,23 +349,23 @@ int     main(void)
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
-//	ft_memccpy_test();
-//	ft_memmove_test();
+	ft_memccpy_test();
+	ft_memmove_test();
 	ft_memchr_test();
 	ft_memcmp_test();
 
 	ft_memalloc_test();
 	ft_memdel_test();
 	ft_strnew_test();
-//	ft_strdel_test();
-//	ft_strclr_test();
-//
-//	ft_strequ_test();
-//	ft_strnequ_test();
-//	ft_strsub_test();
-//	ft_strjoin_test();
-//	ft_strtrim_test();
-//	ft_strsplit_test()
+	ft_strdel_test();
+	ft_strclr_test();
+
+	ft_strequ_test();
+	ft_strnequ_test();
+	ft_strsub_test();
+	ft_strjoin_test();
+	ft_strtrim_test();
+	ft_strsplit_test();
 	
 	return (0);
 }

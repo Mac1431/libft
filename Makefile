@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/06/01 13:56:34 by pmalope          ###   ########.fr        #
+#    Updated: 2019/06/04 16:49:59 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC = ft_tolower.c \
 	  ft_isdigit.c \
 	  ft_isalpha.c \
 	  ft_atoi.c \
+	  ft_itoa.c \
 	  ft_strlen.c \
 	  ft_strdup.c \
 	  ft_strcpy.c \

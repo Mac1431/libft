@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/01 14:38:42 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/04 16:49:22 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int     ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int     ft_atoi(const char *str);
+char	*ft_itoa(int n);
 
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
