@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/04 16:24:41 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/05 12:39:40 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -317,9 +317,81 @@ void	ft_strsplit_test(void)
 	char	s1[BUF];
 	char	**tab;
 
-	ft_strcpy(s1, "Martian Macmillian Malope Phetho");
-	tab = ft_strsplit(s1, ' ');
-	printf("ft_strsplit -> %c", *(*(tab)));
+	ft_strcpy(s1, "Martian*Macmillian*Malope*Phetho");
+	tab = ft_strsplit(s1, '*');
+//	printf("ft_strsplit -> %s", *(tab)+0);
+}
+
+void	ft_lstnew_test(void)
+{
+	t_list	*list;
+	char	content[BUF];
+
+	ft_strcpy(content, "I'm starting to like the C langauage");
+	list = ft_lstnew(content, ft_strlen(content));
+	printf("ft_lstnew -> %s\n", list->content);
+	free(list);
+}
+/*
+void	ft_lstdelone_test(void)
+{
+	t_list *node;
+	char	item[BUF];
+
+	ft_strcpy(item, "Hope this function is working!!!");
+	node = ft_lstnew(item, ft_strlen(item));
+	printf("ft_lstdelone -> 'Before deleting' -> %s\n", node->content);
+	ft_lstdelone(&node, ft_lst_del);
+	printf("ft_lstdelone -> 'After deleting' -> %s\n", node->content);
+}
+
+void	ft_lstdel_test(void)
+{
+	t_list	*node;
+	char	content[BUF];
+
+	ft_strcpy(content, "Linked list are fun!!!");
+	node = ft_lstnew(content, ft_strlen(content));
+	printf("ft_lstdel -> 'Before deleting' %s\n", node->content);
+	ft_lstdel(&node, ft_lst_del);
+	printf("ft_lstdel -> 'After deleting' %s\n", node->content);
+}
+*/
+void	ft_lstadd_test(void)
+{
+	int i;
+	t_list	*node;
+	t_list	*list;
+	char	content[BUF];
+	char	item[BUF];
+
+	i = 1;
+	ft_strcpy(content, "We adding a new element");
+	ft_strcpy(item, "to the list");
+	list = ft_lstnew(content, ft_strlen(content));
+	node = ft_lstnew(item, ft_strlen(item));
+	ft_lstadd(&list, node);
+	while (list)
+	{
+		printf("ft_lstadd -> #%d %s\n", i, list->content);
+		list = list->next;
+		i++;
+	}
+}
+
+void	ft_lstiter_test(void)
+{
+	t_list	*list;
+	char	content[BUF];
+
+	ft_strcpy(content, "Hoping");
+	list = ft_lstnew(content, ft_strlen(content));
+	ft_lstiter(list, ft_lst_add);
+	printf("ft_lstiter -> %s\n", list->content);
+}
+
+void	ft_lstmap_test(void)
+{
 }
 
 int     main(void)
@@ -365,7 +437,13 @@ int     main(void)
 	ft_strsub_test();
 	ft_strjoin_test();
 	ft_strtrim_test();
-	ft_strsplit_test();
+//	ft_strsplit_test();
+	ft_lstnew_test();
+//	ft_lstdelone_test();
+//	ft_lstdel_test();
+	ft_lstadd_test();
+	ft_lstiter_test();
+//	ft_lstmap_test();
 	
 	return (0);
 }

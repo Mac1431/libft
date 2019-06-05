@@ -6,11 +6,31 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 07:03:17 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/04 16:44:27 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/05 07:40:36 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static	void	ft_reverse_str(char *s)
+{
+	int		i;
+	int		j;
+	char	tmp;
+
+	i = 0;
+	j = ft_strlen(s) - 1;
+	while (i < j || (((ft_strlen(s)) % 2 == 0) && i > j))
+	{
+		if (*s == '-')
+			i++;
+		tmp = *(s + i);
+		*(s + i) = *(s + j);
+		*(s + j) = tmp;
+		i++;
+		j--;
+	}
+}
 
 static	int		ft_int_len(int n)
 {

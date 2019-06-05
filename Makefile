@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/06/04 16:49:59 by pmalope          ###   ########.fr        #
+#    Updated: 2019/06/05 10:38:04 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,13 @@ SRC = ft_tolower.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
-	  ft_strsplit.c
+	  ft_strsplit.c\
+	  ft_lstnew.c \
+	  ft_lstdelone.c\
+	  ft_lstdel.c \
+	  ft_lstadd.c \
+	  ft_lstiter.c\
+	  ft_lstmap.c
 
 OBJ = $(SRC:%.c=%.o)
 

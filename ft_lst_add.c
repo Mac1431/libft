@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lst_add.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/25 01:09:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/05 14:39:13 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/05 10:05:28 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/05 10:31:30 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lst_add(t_list *elem)
 {
-	char    *ptr_dst;
-	char    *ptr_src;
+	int i;
 
-	ptr_dst = dst;
-	ptr_src = (char *)src;
-	if (ptr_dst == ptr_src)
-		return (ptr_src);
-	while (n > 0)
+	i = 0;
+	while (((unsigned char)elem->content)[i])
 	{
-	    *ptr_dst = *ptr_src;
-	    ptr_dst++;
-	    ptr_src++;
-		n--;
+		((unsigned char *)elem->content[i]) += 32;
+		i++;
 	}
-	return (dst);
 }

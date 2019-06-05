@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/04 16:49:22 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/05 10:13:35 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef	struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}					t_list;
 
 int     ft_tolower(int c);
 int     ft_toupper(int c);
@@ -67,13 +74,21 @@ void    ft_striter(char *s, void (*f)(char *));
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 char    *ft_strmap(char const *s, char (*f)(char));
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-/* Remove this function */
+/* Remove this functions */
 void    ft_add(char *);
-/* Do not submit this ^ function */
+void	ft_lst_del(void *, size_t);
+void	ft_lst_add(t_list *elem);
+/* Do not submit this ^ functions */
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, const char *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list	**alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 #endif

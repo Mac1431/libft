@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/25 01:09:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/05 14:39:13 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/05 10:32:37 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/05 12:38:28 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char    *ptr_dst;
-	char    *ptr_src;
-
-	ptr_dst = dst;
-	ptr_src = (char *)src;
-	if (ptr_dst == ptr_src)
-		return (ptr_src);
-	while (n > 0)
+	t_list	*node;
+	t_list	*node_item;
+	if (lst)
 	{
-	    *ptr_dst = *ptr_src;
-	    ptr_dst++;
-	    ptr_src++;
-		n--;
+		node = f(lst);
+		node_item = node;
+		while (lst)
+		{
+			node_item->next = f(lst);
+			node_item = node_item->next;
+			lst = lst->next;
+		}
+		return (node);
 	}
-	return (dst);
+	return (NULL);
 }
