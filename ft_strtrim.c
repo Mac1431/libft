@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:40:06 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/01 13:55:08 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:55:34 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char    *ft_strtrim(char const *s)
 
 	start = 0;
 	end = 0;
-	if (s)
+	if (!s)
+		return (NULL);
+	else
 		len = ft_strlen(s);
 	while ((s && *(s + start) && *(s + start) == ' ') || (*(s + start) == '\n' \
 			|| *(s + start) == '\t'))

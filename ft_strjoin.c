@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:23:53 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/01 13:35:57 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:53:57 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char    *ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 
 	index = 0;
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = (char *)malloc(sizeof(char) + len);
 	if (!str)
