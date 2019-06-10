@@ -6,14 +6,14 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/07 08:45:42 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/10 09:16:04 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 #define BUF 100
-
+/*
 void	ft_tolower_test(void)
 {
 	printf("ft_tolower -> %c\n", ft_tolower('A'));
@@ -311,17 +311,27 @@ void	ft_strtrim_test(void)
 	ptr_strtrim = ft_strtrim("    Martian is a God      ");
 	printf("ft_strtrim -> %s\n", ptr_strtrim);
 }
-
+*/
 void	ft_strsplit_test(void)
 {
+	int		index;
 	char	s1[BUF];
 	char	**tab;
 
+	index = 0;
 	ft_strcpy(s1, "Martian*Macmillian*Malope*Phetho");
+	printf("Failing for some reason\n");
 	tab = ft_strsplit(s1, '*');
+//	if (*(tab))
+//	printf("%s\n", *(tab));
+//	while (*(*(tab + index)))
+//	{
+//		printf("ft_strsplit -> tab#[%d] -> %s\n", index, *(tab + index));
+//		index++;
+//	}
 //	printf("ft_strsplit -> %s", *(tab)+0);
 }
-
+/*
 void	ft_lstnew_test(void)
 {
 	t_list	*list;
@@ -332,7 +342,7 @@ void	ft_lstnew_test(void)
 	printf("ft_lstnew -> %s\n", list->content);
 	free(list);
 }
-/*
+
 void	ft_lstdelone_test(void)
 {
 	t_list *node;
@@ -356,7 +366,7 @@ void	ft_lstdel_test(void)
 	ft_lstdel(&node, ft_lst_del);
 	printf("ft_lstdel -> 'After deleting' %s\n", node->content);
 }
-*/
+
 void	ft_lstadd_test(void)
 {
 	int i;
@@ -393,57 +403,56 @@ void	ft_lstiter_test(void)
 void	ft_lstmap_test(void)
 {
 }
-
+*/
 int     main(void)
 {
-	ft_tolower_test();
-	ft_toupper_test();
-	ft_isprint_test();
-	ft_isascii_test();
-	ft_isalnum_test();
-	ft_isdigit_test();
-	ft_isalpha_test();
+//	ft_tolower_test();
+//	ft_toupper_test();
+//	ft_isprint_test();
+//	ft_isascii_test();
+//	ft_isalnum_test();
+//	ft_isdigit_test();
+//	ft_isalpha_test();
 
-	ft_strlen_test();
-	ft_strdup_test();
-	ft_strcpy_test();
-	ft_strncpy_test();
-	ft_strcat_test();
-	ft_strncat_test();
-	ft_strlcat_test();
-	ft_strchr_test();
-	ft_strrchr_test();
-	ft_strcmp_test();
-	ft_strncmp_test();
+//	ft_strlen_test();
+//	ft_strdup_test();
+//	ft_strcpy_test();
+//	ft_strncpy_test();
+//	ft_strcat_test();
+//	ft_strncat_test();
+//	ft_strlcat_test();
+//	ft_strchr_test();
+//	ft_strrchr_test();
+//	ft_strcmp_test();
+//	ft_strncmp_test();
 
-	ft_atoi_test();
+//	ft_atoi_test();
 
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memccpy_test();
-	ft_memmove_test();
-	ft_memchr_test();
-	ft_memcmp_test();
+//	ft_memset_test();
+//	ft_bzero_test();
+//	ft_memcpy_test();
+//	ft_memccpy_test();
+//	ft_memmove_test();
+//	ft_memchr_test();
+//	ft_memcmp_test();
+//
+//	ft_memalloc_test();
+//	ft_memdel_test();
+//	ft_strnew_test();
+//	ft_strdel_test();
+//	ft_strclr_test();
 
-	ft_memalloc_test();
-	ft_memdel_test();
-	ft_strnew_test();
-	ft_strdel_test();
-	ft_strclr_test();
-
-	ft_strequ_test();
-	ft_strnequ_test();
-	ft_strsub_test();
-	ft_strjoin_test();
-	ft_strtrim_test();
-//	ft_strsplit_test();
-	ft_lstnew_test();
+//	ft_strequ_test();
+//	ft_strnequ_test();
+//	ft_strsub_test();
+//	ft_strjoin_test();
+//	ft_strtrim_test();
+	ft_strsplit_test();
+//	ft_lstnew_test();
 //	ft_lstdelone_test();
 //	ft_lstdel_test();
-	ft_lstadd_test();
-	ft_lstiter_test();
+//	ft_lstadd_test();
+//	ft_lstiter_test();
 //	ft_lstmap_test();
-	
 	return (0);
 }
