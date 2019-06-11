@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/10 09:16:04 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/11 14:55:55 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -320,16 +320,12 @@ void	ft_strsplit_test(void)
 
 	index = 0;
 	ft_strcpy(s1, "Martian*Macmillian*Malope*Phetho");
-	printf("Failing for some reason\n");
 	tab = ft_strsplit(s1, '*');
-//	if (*(tab))
-//	printf("%s\n", *(tab));
-//	while (*(*(tab + index)))
-//	{
-//		printf("ft_strsplit -> tab#[%d] -> %s\n", index, *(tab + index));
-//		index++;
-//	}
-//	printf("ft_strsplit -> %s", *(tab)+0);
+	while (*(tab + index))
+	{
+		printf("ft_strsplit -> tab#[%d] -> %c\n", index, *(*(tab + index)));
+		index++;
+	}
 }
 /*
 void	ft_lstnew_test(void)
