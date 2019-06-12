@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:55:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/05 09:17:01 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/12 07:41:52 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_lst_del(void *node, size_t size)
 {
-	while (size > 0)
-	{
-		free(node);
-		node++;
-		size--;
-	}
+	free(node);
+	node = NULL;
+	size = 0;
 }

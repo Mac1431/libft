@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/11 14:55:55 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/12 08:19:43 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,16 +172,17 @@ void	ft_memset_test(void)
 	ft_memset(str, '0', 3);
 	printf("ft_memset -> %c\n", str[0]);
 }
-
+*/
 void	ft_bzero_test(void)
 {
 	char	str[BUF];
 
 	ft_strcpy(str, "Martian");
-	ft_bzero(str, 5);
-	printf("ft_bzero -> %d\n", str[5]);
+	printf("Before -> %d\n", str[0]);
+	ft_bzero(str, 2);
+	printf("ft_bzero -> %d\n", str[2]);
 }
-
+/*
 void	ft_memcpy_test(void)
 {
 	char	str[BUF];
@@ -194,7 +195,7 @@ void	ft_memccpy_test(void)
 {
 	char	str[BUF];
 
-	ft_memccpy(str, "Martian of course", 'f', 17);
+	ft_memccpy(str, "Martian of course", 'z', 10);
 	printf("ft_memccpy -> %s\n", str);
 
 }
@@ -311,7 +312,7 @@ void	ft_strtrim_test(void)
 	ptr_strtrim = ft_strtrim("    Martian is a God      ");
 	printf("ft_strtrim -> %s\n", ptr_strtrim);
 }
-*/
+
 void	ft_strsplit_test(void)
 {
 	int		index;
@@ -323,11 +324,11 @@ void	ft_strsplit_test(void)
 	tab = ft_strsplit(s1, '*');
 	while (*(tab + index))
 	{
-		printf("ft_strsplit -> tab#[%d] -> %c\n", index, *(*(tab + index)));
+		printf("ft_strsplit -> tab#[%d] -> %s\n", index, *(tab + index));
 		index++;
 	}
 }
-/*
+
 void	ft_lstnew_test(void)
 {
 	t_list	*list;
@@ -335,20 +336,33 @@ void	ft_lstnew_test(void)
 
 	ft_strcpy(content, "I'm starting to like the C langauage");
 	list = ft_lstnew(content, ft_strlen(content));
-	printf("ft_lstnew -> %s\n", list->content);
+	printf("ft_lstnew address -> %p\n", &list);
+	printf("ft_lstnew content -> %s\n", list->content);
+	printf("ft_lstnew content_size -> %zu\n", ft_strlen(list->content));
 	free(list);
 }
 
 void	ft_lstdelone_test(void)
 {
 	t_list *node;
+	t_list *node1;
+	char	item1[BUF];
 	char	item[BUF];
 
-	ft_strcpy(item, "Hope this function is working!!!");
+	ft_strcpy(item, "Hope this function is working");
+	ft_strcpy(item1, "Deleting the link");
 	node = ft_lstnew(item, ft_strlen(item));
-	printf("ft_lstdelone -> 'Before deleting' -> %s\n", node->content);
+	node1 = ft_lstnew(item1, ft_strlen(item1));
+	node->next = node1;
+	while (node)
+	{
+		printf("ft_lstdelone address -> %p\n", &node->next);
+		printf("ft_lstdelone -> 'Before deleting' -> %s\n", node->content);
+		node = node->next;
+	}
 	ft_lstdelone(&node, ft_lst_del);
-	printf("ft_lstdelone -> 'After deleting' -> %s\n", node->content);
+//	printf("ft_lstdelone address -> %p\n", &node1);
+//	printf("ft_lstdelone -> 'After deleting' -> %s\n", node1->content);
 }
 
 void	ft_lstdel_test(void)
@@ -425,7 +439,7 @@ int     main(void)
 //	ft_atoi_test();
 
 //	ft_memset_test();
-//	ft_bzero_test();
+	ft_bzero_test();
 //	ft_memcpy_test();
 //	ft_memccpy_test();
 //	ft_memmove_test();
@@ -443,7 +457,7 @@ int     main(void)
 //	ft_strsub_test();
 //	ft_strjoin_test();
 //	ft_strtrim_test();
-	ft_strsplit_test();
+//	ft_strsplit_test();
 //	ft_lstnew_test();
 //	ft_lstdelone_test();
 //	ft_lstdel_test();
