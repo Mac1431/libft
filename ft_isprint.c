@@ -6,13 +6,13 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:28:43 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/22 15:20:27 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 10:44:25 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isprint(int c)
+int		ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

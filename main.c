@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/12 08:19:43 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 10:56:14 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	ft_isalpha_test(void)
 {
 	printf("ft_isalpha -> %d\n", ft_isalpha('a'));
 }
-
-void	ft_strlen_test(void)
+*/
+void	ft_strlen_testing(void)
 {
 	printf("ft_strlen -> %zu\n", ft_strlen("Counting characters in a string!!!"));
 }
@@ -145,7 +145,7 @@ void	ft_strnstr_test(void)
 	char	*ptr;
 
 	ft_strcpy(string, "Looking for a substring in this string where not more than size of characters are searched!!");
-	ptr = ft_strnstr(string, "string", 6);
+	ptr = ft_strnstr(string, "string", ft_strlen(string));
 	printf("ft_strnstr -> %s\n", ptr);
 }
 
@@ -161,7 +161,7 @@ void	ft_strncmp_test(void)
 
 void	ft_atoi_test(void)
 {
-	printf("ft_atoi -> %d\n", ft_atoi("-1431"));
+	printf("ft_atoi -> %d\n\n", ft_atoi("-1431"));
 }
 
 void	ft_memset_test(void)
@@ -169,20 +169,21 @@ void	ft_memset_test(void)
 	char	str[BUF];
 
 	ft_strcpy(str, "Martian");
-	ft_memset(str, '0', 3);
-	printf("ft_memset -> %c\n", str[0]);
+	printf("ft_memset 'Before' -> %s\n", str);
+	ft_memset(str, '0', 1);
+	printf("ft_memset 'After' -> %s\n\n", str);
 }
-*/
+
 void	ft_bzero_test(void)
 {
 	char	str[BUF];
 
 	ft_strcpy(str, "Martian");
-	printf("Before -> %d\n", str[0]);
+	printf("ft_bzero 'Before' -> %s\n", str);
 	ft_bzero(str, 2);
-	printf("ft_bzero -> %d\n", str[2]);
+	printf("ft_bzero  'After' -> %s\n\n", str);
 }
-/*
+
 void	ft_memcpy_test(void)
 {
 	char	str[BUF];
@@ -195,7 +196,7 @@ void	ft_memccpy_test(void)
 {
 	char	str[BUF];
 
-	ft_memccpy(str, "Martian of course", 'z', 10);
+	ft_memccpy(str, "Martian of course", 'z', 19);
 	printf("ft_memccpy -> %s\n", str);
 
 }
@@ -204,7 +205,7 @@ void	ft_memmove_test(void)
 {
 	char	str_move[BUF];
 
-	memmove(str_move, "Martina", 2);
+	memmove(str_move, "what is happening!!!", 20);
 	printf("ft_memmove -> %s\n", str_move);
 
 }
@@ -221,9 +222,9 @@ void	ft_memchr_test(void)
 
 void	ft_memcmp_test(void)
 {
-	printf("ft_memcmp -> %d\n", ft_memcmp("Martian", "Martian", 6));
+	printf("ft_memcmp -> %d\n\n", ft_memcmp("Martian", "martian", 6));
 }
-
+/*
 void	ft_memalloc_test(void)
 {
 	char	*newstr;
@@ -424,33 +425,34 @@ int     main(void)
 //	ft_isdigit_test();
 //	ft_isalpha_test();
 
-//	ft_strlen_test();
-//	ft_strdup_test();
-//	ft_strcpy_test();
-//	ft_strncpy_test();
-//	ft_strcat_test();
-//	ft_strncat_test();
-//	ft_strlcat_test();
-//	ft_strchr_test();
-//	ft_strrchr_test();
-//	ft_strcmp_test();
-//	ft_strncmp_test();
+	ft_strlen_testing();
+	ft_strdup_test();
+	ft_strcpy_test();
+	ft_strncpy_test();
+	ft_strcat_test();
+	ft_strncat_test();
+	ft_strlcat_test();
+	ft_strchr_test();
+	ft_strrchr_test();
+	ft_strstr_test();
+	ft_strnstr_test();
+	ft_strcmp_test();
+	ft_strncmp_test();
+	ft_atoi_test();
 
-//	ft_atoi_test();
-
-//	ft_memset_test();
+	ft_memset_test();
 	ft_bzero_test();
-//	ft_memcpy_test();
-//	ft_memccpy_test();
-//	ft_memmove_test();
-//	ft_memchr_test();
-//	ft_memcmp_test();
-//
-//	ft_memalloc_test();
-//	ft_memdel_test();
-//	ft_strnew_test();
-//	ft_strdel_test();
-//	ft_strclr_test();
+	ft_memcpy_test();
+	ft_memccpy_test();
+	ft_memmove_test();
+	ft_memchr_test();
+	ft_memcmp_test();
+
+	ft_memalloc_test();
+	ft_memdel_test();
+	ft_strnew_test();
+	ft_strdel_test();
+	ft_strclr_test();
 
 //	ft_strequ_test();
 //	ft_strnequ_test();

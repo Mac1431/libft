@@ -6,13 +6,13 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:09:02 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/22 13:10:03 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 10:42:40 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isdigit(int c)
+int		ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

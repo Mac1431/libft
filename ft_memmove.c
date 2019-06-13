@@ -6,13 +6,13 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 08:50:16 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/05 16:25:58 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 08:32:30 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*tmp_dst;
 	char	*tmp_src;
@@ -21,21 +21,17 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	tmp_src = (char *)src;
 	if (tmp_dst == tmp_src)
 		return (tmp_dst);
-    if ((tmp_dst <= tmp_src) || (tmp_dst >= (tmp_src + len)))
+	if ((tmp_dst <= tmp_src) || (tmp_dst >= (tmp_src + len)))
 	{
-		while (len-- > 0)
-		{
+		while ((len--) > 0)
 			*(tmp_dst++) = *(tmp_src++);
-		}
 	}
 	else
 	{
-		tmp_src = (char *)src + len - 1;
-		tmp_dst = (char *)dst + len - 1;
+		tmp_src += len - 1;
+		tmp_dst += + len - 1;
 		while (len-- > 0)
-		{
 			*(tmp_dst--) = *(tmp_src--);
-		}
 	}
 	return (dst);
 }
