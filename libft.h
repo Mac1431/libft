@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:47:26 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 10:39:32 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 15:57:00 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-/*Additional Functions*/
+/* Part two - Additional Functions*/
 
 char	*ft_itoa(int n);
 void    ft_putstr(char const *s);
