@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 08:02:54 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/11 13:52:37 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/12 12:26:44 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 		node->content = (char *)malloc(content_size);
 		if (node->content)
 		{
-			while (i < content_size + 1)
+			while (i < content_size)
 			{
-				((unsigned char *)node->content)[i - 1] = ((unsigned char *)content)[i - 1];
+				((char *)node->content)[i] = ((char *)content)[i];
 				i++;
 			}
 		}
+		node->content_size = content_size;
 	}
 	else
 	{

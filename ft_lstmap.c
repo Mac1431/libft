@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:32:37 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/05 12:38:28 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/12 12:28:08 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	{
 		node = f(lst);
 		node_item = node;
+		lst = lst->next;
 		while (lst)
 		{
 			node_item->next = f(lst);

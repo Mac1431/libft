@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/06/12 07:54:48 by pmalope          ###   ########.fr        #
+#    Updated: 2019/06/12 12:12:33 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,8 @@ OBJ = $(SRC:%.c=%.o)
 
 all: build_lib
 
+$(NAME): all
+
 build_lib: create_obj
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
@@ -90,7 +92,7 @@ create_obj:
 	$(CC) $(FLAGS) -c $(SRC)
 
 norm:
-	norminette -R CheckForbiddenSourceHeader $(SRC) libft.h
+	norminette $(SRC) libft.h
 
 clean:
 	rm -rf $(OBJ)
