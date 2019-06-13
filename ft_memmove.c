@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 08:50:16 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 08:32:30 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:06:14 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	else
 	{
 		tmp_src += len - 1;
-		tmp_dst += + len - 1;
+		tmp_dst += len - 1;
 		while (len-- > 0)
 			*(tmp_dst--) = *(tmp_src--);
 	}

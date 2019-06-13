@@ -6,17 +6,17 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:09:05 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/07 15:51:02 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:59:59 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1)
 		return (0);
-	else if (ft_strcmp(s1, s2) != '\0')
+	else if (ft_strcmp(s1, s2))
 		return (0);
 	else
 		return (1);

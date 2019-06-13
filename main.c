@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 10:56:14 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 15:53:23 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -425,34 +425,34 @@ int     main(void)
 //	ft_isdigit_test();
 //	ft_isalpha_test();
 
-	ft_strlen_testing();
-	ft_strdup_test();
-	ft_strcpy_test();
-	ft_strncpy_test();
-	ft_strcat_test();
-	ft_strncat_test();
-	ft_strlcat_test();
-	ft_strchr_test();
-	ft_strrchr_test();
-	ft_strstr_test();
-	ft_strnstr_test();
-	ft_strcmp_test();
-	ft_strncmp_test();
-	ft_atoi_test();
+//	ft_strlen_testing();
+//	ft_strdup_test();
+//	ft_strcpy_test();
+//	ft_strncpy_test();
+//	ft_strcat_test();
+//	ft_strncat_test();
+//	ft_strlcat_test();
+//	ft_strchr_test();
+//	ft_strrchr_test();
+//	ft_strstr_test();
+//	ft_strnstr_test();
+//	ft_strcmp_test();
+//	ft_strncmp_test();
+//	ft_atoi_test();
 
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memccpy_test();
-	ft_memmove_test();
-	ft_memchr_test();
-	ft_memcmp_test();
+//	ft_memset_test();
+//	ft_bzero_test();
+//	ft_memcpy_test();
+//	ft_memccpy_test();
+//	ft_memmove_test();
+//	ft_memchr_test();
+//	ft_memcmp_test();
 
-	ft_memalloc_test();
-	ft_memdel_test();
-	ft_strnew_test();
-	ft_strdel_test();
-	ft_strclr_test();
+//	ft_memalloc_test();
+//	ft_memdel_test();
+//	ft_strnew_test();
+//	ft_strdel_test();
+//	ft_strclr_test();
 
 //	ft_strequ_test();
 //	ft_strnequ_test();

@@ -6,11 +6,11 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 18:08:36 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 09:17:47 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:20:44 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strcmp(const char *s1, const char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	int i;
 

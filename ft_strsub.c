@@ -6,16 +6,16 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:19:30 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/11 07:41:47 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 13:11:30 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strsub(char const  *s, unsigned int start, size_t len)
+char	*ft_strsub(char const  *s, unsigned int start, size_t len)
 {
-	int index;
-	char *str;
+	int		index;
+	char	*str;
 
 	if (s == NULL)
 		return (NULL);
@@ -23,7 +23,6 @@ char    *ft_strsub(char const  *s, unsigned int start, size_t len)
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
 	while (s[start] != '\0' && len)
 	{
 		str[index] = s[start];
@@ -31,5 +30,6 @@ char    *ft_strsub(char const  *s, unsigned int start, size_t len)
 		start++;
 		len--;
 	}
+	str[index] = '\0';
 	return (str);
 }

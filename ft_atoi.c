@@ -6,13 +6,13 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:29:20 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 10:41:34 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:22:01 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int sign;
 	int tmp;

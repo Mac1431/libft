@@ -6,25 +6,25 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:28:50 by pmalope           #+#    #+#             */
-/*   Updated: 2019/05/28 07:22:06 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:59:14 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strcat(char *s1, const char *s2)
-{
-    int i;
-    int j;
+#include "libft.h"
 
-    i = 0;
-    j = 0;
-    while (s1[i] != '\0')
-        i++;
-    while (s2[j] != '\0')
-    {
-        s1[i] = s2[j];
-        i++;
-        j++;
-    }
-    s1[i] = '\0';
-    return (s1);
+char	*ft_strcat(char *s1, const char *s2)
+{
+	int i;
+	int j;
+
+	j = 0;
+	i = ft_strlen(s1);
+	while (s2[j] != '\0')
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }

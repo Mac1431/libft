@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 09:31:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 08:31:30 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/13 12:07:38 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char   *temp;
+	unsigned char	*temp;
 
 	temp = (unsigned char*)s;
 	while (n > 0)
