@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 08:52:56 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 16:05:10 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/17 14:37:58 by lkhuvhe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,7 @@ void	ft_strnstr_test(void)
 
 void	ft_strcmp_test(void)
 {
-	printf("ft_strcmp -> %d\n", ft_strcmp("Martian", "MartiAn"));
+	printf("ft_strcmp -> %d\n", ft_strcmp("martian", "marTian"));
 }
 
 void	ft_strncmp_test(void)
@@ -313,7 +313,7 @@ void	ft_strtrim_test(void)
 	ptr_strtrim = ft_strtrim("    Martian is a God      ");
 	printf("ft_strtrim -> %s\n", ptr_strtrim);
 }
-
+*/
 void	ft_strsplit_test(void)
 {
 	int		index;
@@ -329,7 +329,7 @@ void	ft_strsplit_test(void)
 		index++;
 	}
 }
-
+/*
 void	ft_lstnew_test(void)
 {
 	t_list	*list;
@@ -436,7 +436,7 @@ int     main(void)
 //	ft_strrchr_test();
 //	ft_strstr_test();
 //	ft_strnstr_test();
-//	ft_strcmp_test();
+	ft_strcmp_test();
 //	ft_strncmp_test();
 //	ft_atoi_test();
 
@@ -459,7 +459,7 @@ int     main(void)
 //	ft_strsub_test();
 //	ft_strjoin_test();
 //	ft_strtrim_test();
-//	ft_strsplit_test();
+	ft_strsplit_test();
 //	ft_lstnew_test();
 //	ft_lstdelone_test();
 //	ft_lstdel_test();

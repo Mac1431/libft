@@ -6,7 +6,7 @@
 #    By: pmalope <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 15:25:45 by pmalope           #+#    #+#              #
-#    Updated: 2019/06/13 15:52:15 by pmalope          ###   ########.fr        #
+#    Updated: 2019/06/17 11:45:46 by pmalope          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,15 +80,13 @@ SRC = ft_tolower.c \
 
 OBJ = $(SRC:%.c=%.o)
 
-all: build_lib
+all: $(NAME)
 
-$(NAME): all
-
-build_lib: create_obj
+$(NAME): $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-create_obj:
+$(OBJ):
 	$(CC) $(FLAGS) -c $(SRC)
 
 norm:

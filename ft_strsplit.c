@@ -6,7 +6,7 @@
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:57:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 14:24:14 by pmalope          ###   ########.fr       */
+/*   Updated: 2019/06/17 10:12:44 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static	int		ft_nbwords(char const *s, char c)
 
 	i = 0;
 	words = 0;
-	while (s && *(s + i))
+	while (*(s + i))
 	{
-		while (*(s + i) && *(s + i) == c)
+		while (*(s + i) == c)
 			i++;
 		if (*(s + i))
 			words++;
