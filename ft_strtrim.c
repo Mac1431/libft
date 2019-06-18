@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 13:40:06 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 14:19:08 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/18 13:25:08 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 13:29:10 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s)
 			start++;
 		while (s && end < len && ft_isspace(*(s + len - 1 - end)))
 			end++;
-		if ((int )(len - end - start) < 0)
+		if ((int)(len - end - start) < 0)
 		{
 			str = ft_strsub(s, start, 0);
 			return (str);

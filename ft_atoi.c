@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 15:29:20 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 12:22:01 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/18 09:26:37 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 13:49:41 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_atoi(const char *str)
 {
-	int sign;
-	int tmp;
+	int		sign;
+	int		tmp;
 
 	sign = 1;
 	tmp = 0;

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 13:57:42 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/17 10:12:44 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/18 12:19:02 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 13:24:19 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static	int		ft_nbwords(char const *s, char c)
 	return (words);
 }
 
-static  void	ft_split(char **tab, char const *str, char delimiter)
+static	void	ft_split(char **tab, char const *str, char c)
 {
 	int		i;
 	int		words;
@@ -40,13 +40,13 @@ static  void	ft_split(char **tab, char const *str, char delimiter)
 
 	i = 0;
 	index = 0;
-    len = 0;
-	words = ft_nbwords(str, delimiter);
+	len = 0;
+	words = ft_nbwords(str, c);
 	while (words - i)
 	{
-		while (str && *(str + index) == delimiter)
+		while (str && *(str + index) == c)
 			index++;
-		while (str && *(str + index + len) && *(str + index + len) != delimiter)
+		while (str && *(str + index + len) && *(str + index + len) != c)
 			len++;
 		tab[i] = ft_strsub(str, index, len);
 		index += len;

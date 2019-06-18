@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 07:05:24 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 10:54:05 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/18 10:33:44 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 10:34:24 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
 	ft_memdel((void **)as);
 }

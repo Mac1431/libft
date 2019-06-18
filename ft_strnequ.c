@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/01 13:10:09 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/17 15:03:00 by lkhuvhe          ###   ########.fr       */
+/*   Created: 2019/06/18 11:37:19 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 13:38:22 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	if (!s1 || !s2)
 		return (0);
-	return (!(ft_strncmp(s1, s2, n)));
+	return (!ft_strncmp(s1, s2, n));
 }

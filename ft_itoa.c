@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmalope <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 07:03:17 by pmalope           #+#    #+#             */
-/*   Updated: 2019/06/13 14:30:10 by pmalope          ###   ########.fr       */
+/*   Created: 2019/06/18 12:11:11 by pmalope           #+#    #+#             */
+/*   Updated: 2019/06/18 13:36:26 by pmalope          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static	int		ft_int_len(int n)
 	return (len);
 }
 
-char 			*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		len;
 	char	*str;
