@@ -37,14 +37,14 @@ memcmp		| ft_striteri	|			|
 strlen		| ft_strmap		|		|
 strdup		| ft_strmapi	|			|
 strcpy		| ft_strequ		|		|
-strncpy		| ft_strnequ	|			|
-strcat		| ft_strsub		| |
-strlcat		| ft_strjoin	| |
-strchr		| ft_strtrim	| |
-strrchr		| ft_strsplit	| |
-strstr		| ft_itoa		| |
-strnstr		| ft_putchar	| |
-strcmp		| ft_putstr		| |
+strncpy		| ft_strnequ	|
+strcat		| ft_strsub		|
+strlcat		| ft_strjoin	|
+strchr		| ft_strtrim	|
+strrchr		| ft_strsplit	|
+strstr		| ft_itoa		|
+strnstr		| ft_putchar	|
+strcmp		| ft_putstr		|
 strncmp		| ft_putendl	| |
 atoi		| ft_putnbr		| |
 isalpha		| ft_putchar_fd	| |
