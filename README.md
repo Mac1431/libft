@@ -6,9 +6,6 @@ My implementation of some of the Standard C Library functions including some add
 * [What's in it?](#whats-in-it)
 * [How does it work?](#how-does-it-work)
 * [How do I use the library?](#how-do-i-use-the-library)
-* [How do I test it? How do I test my own implementations?](#how-do-i-test-it-how-do-i-test-my-own-implementations)
-	1. [To test the code in this repo](#1-to-test-the-code-in-this-repo)
-	2. [To test your own code](#2-to-test-your-own-code)
 * [Example usage](#example-usage)
 
 ### What is libft?
@@ -88,68 +85,6 @@ You have to include the library when compiling:
 
 That's it. Now run it using `./a.out`
 
-### How do I test it? How do I test my own implementations?
-
-To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
-
-#### 1. To test the code in this repo
-
-1. Clone this repo and cd into it, make sure it's called `libft`:
-		
-		git clone https://github.com/R4meau/libft
-		cd libft/
-2. Copy all the source files to the root directory:
-	
-		make copy
-3. Run Make so you can build the library:
-		
-		make
-4. Go back to the root directory and download @alelievr's Libft Unit Test:
-		
-		cd ..
-		git clone https://github.com/alelievr/libft-unit-test
-5. Go into the test folder and run the test:
-
-		cd libft-unit-test/
-		make f
-
-If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
-
-#### 2. To test your own code
-
-You might want to have a go at this project too. If you've never heard of Makefiles, don't worry, you don't have to learn about it now. So go ahead and follow those steps:
-
-1. Create a directory for your project, make sure you call it `libft`:
-
-		mkdir libft
-2. Clone this repo (don't name it libft) and copy the Makefile-sample as Makefile and libft.h to your own project:
-
-		git clone https://github.com/R4meau/libft r4-libft
-		cp r4-libft/Makefile-sample libft/Makefile
-		cp r4-libft/libft.h libft/
-3. Go to your project, [read the instructions][1] for the function you want to create, code it and uncomment it from the Makefile:
-
-		cd libft
-		vim ft_memset.c
-		vim Makefile
-		
-	As an example, after creating ft_memset as your first function, you go into the Makefile, remove the `#` in front of `FILES`, remove the `\` at the end of `ft_memset` and add a `#` in front of `ft_bzero`. 
-	
-	If it still looks complicated, **DON'T PANIC**, [just ask me][8] :)
-4. Run Make so you can build the library:
-		
-		make	
-5. Go back to the root directory and download @alelievr's Libft Unit Test:
-		
-		cd ..
-		git clone https://github.com/alelievr/libft-unit-test
-6. Go into the test folder and run the test:
-
-		cd libft-unit-test/
-		make f
-
-That's it! If you're having some problems, just [send me a tweet][8]. If you think your problem is due to my code or this README, [create a new issue][9]. I'll definitely check it out.
-
 ## Example usage
 
 This is a list of my projects that use Libft extensively:
@@ -165,13 +100,3 @@ This is a list of my projects that use Libft extensively:
 <a href="https://app.codesponsor.io/link/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft" rel="nofollow"><img src="https://app.codesponsor.io/embed/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
 
 Enjoy.
-
-[1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
-[2]: http://WeThinkCode.us.org "WeThinkCode USA"
-[3]: https://github.com/R4meau/libft/wiki/Personal-Functions-Documentation
-[4]: https://github.com/alelievr/libft-unit-test
-[5]: https://github.com/yyang42/moulitest
-[6]: https://github.com/QuentinPerez/Maintest/tree/master/libft
-[7]: https://github.com/Kant1-0/libft-test
-[8]: https://twitter.com/r4meau
-[9]: https://github.com/R4meau/libft/issues
