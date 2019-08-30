@@ -9,17 +9,17 @@ My implementation of some of the Standard C Library functions including some add
 * [Example usage](#example-usage)
 
 ### What is libft?
-[Libft] is an individual project at [WeThinkCode] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+[Libft] is an individual project at [WeThinkCode_] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
-Disclaimer: *Reinventing the wheel is bad, WeThinkCode makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At WeThinkCode we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
+Disclaimer: *Reinventing the wheel is bad, WeThinkCode_ makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At WeThinkCode_ we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
 ### What's in it?
 
 There are 4 sections:
 
 1.  **Libc Functions:** Some of the standard C functions
-2.  **Additional functions:** Functions WeThinkCode deems will be useful for later projects
-3.  **Bonus Functions:** Functions WeThinkCode deems will be useful for linked list manipulation
+2.  **Additional functions:** Functions WeThinkCode_ deems will be useful for later projects
+3.  **Bonus Functions:** Functions WeThinkCode_ deems will be useful for linked list manipulation
 4.  **Personal Functions:** Functions I believe will be useful later.
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
@@ -53,11 +53,11 @@ toupper		| 				|
 tolower		| 				| 
 
 
-My code is not the best, but it passed all the WeThinkCode tests successfully.
+My code is not the best, but it passed all the WeThinkCode_ tests successfully.
 
 ### How does it work?
 
-The goal is to create a library called libft.a from the source files so I can later use that library from other projects at WeThinkCode.
+The goal is to create a library called libft.a from the source files so I can later use that library from other projects at WeThinkCode_.
 
 To create that library, after downloading/cloning this project, **cd** into the project, call make:
 
