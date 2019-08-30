@@ -9,18 +9,18 @@ My implementation of some of the Standard C Library functions including some add
 * [Example usage](#example-usage)
 
 ### What is libft?
-[Libft][1] is an individual project at [WeThinkCode] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+[Libft] is an individual project at [WeThinkCode] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
 Disclaimer: *Reinventing the wheel is bad, WeThinkCode makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At WeThinkCode we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
 ### What's in it?
 
-As you can see from the [Project instructions][1], there are 4 sections:
+There are 4 sections:
 
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions WeThinkCode deems will be useful for later projects
 3.  **Bonus Functions:** Functions WeThinkCode deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
+4.  **Personal Functions:** Functions I believe will be useful later.
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
@@ -61,7 +61,7 @@ The goal is to create a library called libft.a from the source files so I can la
 
 To create that library, after downloading/cloning this project, **cd** into the project, call make:
 
-	git clone https://github.com/R4meau/libft
+	git clone https://github.com/martian1431/libft.git
 	cd libft
 	make
 
@@ -91,9 +91,6 @@ This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/r4meau/get_next_line)
 * [ft_ls](https://github.com/r4meau/ft_ls)
-* [ft_contrast](https://github.com/R4meau/ft_contrast)
-* [minishell](https://github.com/R4meau/minishell)
-* [ft_select](https://github.com/R4meau/ft_select)
 
 ## Sponsors
 
