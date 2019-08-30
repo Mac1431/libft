@@ -1,7 +1,7 @@
-# Libft - @42Born2Code
+# Libft - @WeThinkCode_
 My implementation of some of the Standard C Library functions including some additional ones.
 
-### TOC
+### Table of content
 * [What is libft?](#what-is-libft)
 * [What's in it?](#whats-in-it)
 * [How does it work?](#how-does-it-work)
@@ -12,45 +12,45 @@ My implementation of some of the Standard C Library functions including some add
 * [Example usage](#example-usage)
 
 ### What is libft?
-[Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+[Libft][1] is an individual project at [WeThinkCode] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
-Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
+Disclaimer: *Reinventing the wheel is bad, WeThinkCode makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At WeThinkCode we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
 ### What's in it?
 
 As you can see from the [Project instructions][1], there are 4 sections:
 
 1.  **Libc Functions:** Some of the standard C functions
-2.  **Additional functions:** Functions 42 deems will be useful for later projects
-3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
+2.  **Additional functions:** Functions WeThinkCode deems will be useful for later projects
+3.  **Bonus Functions:** Functions WeThinkCode deems will be useful for linked list manipulation
 4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
-memset		| ft_memalloc	| ft_lstnew		| ft_capitalize 
-bzero		| ft_memdel		| ft_lstdelone	| ft_countwords 
-memcpy		| ft_strnew		| ft_lstdel		| ft_islower    
-memccpy		| ft_strdel		| ft_lstadd		| ft_isupper    
-memmove		| ft_strclr		| ft_lstiter	| ft_strndup    
-memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse
-memcmp		| ft_striteri	|				| ft_realloc
-strlen		| ft_strmap		|				| ft_strjoinch
-strdup		| ft_strmapi	|				| ft_strnchr
-strcpy		| ft_strequ		|				| ft_copyuntil
-strncpy		| ft_strnequ	|			| ft_strstartswith
-strcat		| ft_strsub		| | ft_intlen
-strlcat		| ft_strjoin	| | ft_strendswith
-strchr		| ft_strtrim	| | ft_pathjoin
-strrchr		| ft_strsplit	| | ft_lstaddback
-strstr		| ft_itoa		| | get_next_line
-strnstr		| ft_putchar	| | ft_putnstr
-strcmp		| ft_putstr		| | ft_strreplace
-strncmp		| ft_putendl	| | ft_isemptystr
-atoi		| ft_putnbr		| | ft_strsplitall
-isalpha		| ft_putchar_fd	| | ft_countwordsall
-isdigit		| ft_putstr_fd	| | ft_freestrarr
-isalnum		| ft_putendl_fd	| | ft_strjoincl
-isascii		| ft_putnbr_fd	| | ft_strjoinchcl
+memset		| ft_memalloc	| ft_lstnew		| ft_isupper
+bzero		| ft_memdel		| ft_lstdelone	| ft_islower 
+memcpy		| ft_strnew		| ft_lstdel		|   
+memccpy		| ft_strdel		| ft_lstadd		|    
+memmove		| ft_strclr		| ft_lstiter	|   
+memchr		| ft_striter	| ft_lstmap		|
+memcmp		| ft_striteri	|				|
+strlen		| ft_strmap		|				|
+strdup		| ft_strmapi	|				|
+strcpy		| ft_strequ		|				|
+strncpy		| ft_strnequ	|			|
+strcat		| ft_strsub		| |
+strlcat		| ft_strjoin	| |
+strchr		| ft_strtrim	| |
+strrchr		| ft_strsplit	| |
+strstr		| ft_itoa		| |
+strnstr		| ft_putchar	| |
+strcmp		| ft_putstr		| |
+strncmp		| ft_putendl	| |
+atoi		| ft_putnbr		| |
+isalpha		| ft_putchar_fd	| |
+isdigit		| ft_putstr_fd	| |
+isalnum		| ft_putendl_fd	| |
+isascii		| ft_putnbr_fd	| |
 isprint		|| | ft_count2darray
 toupper		| | | ft_strarrmax
 tolower		| | | ft_get_parent_path
@@ -62,11 +62,11 @@ Notes:
 - The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
 - I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
 
-My code is not the best, but it passed all the 42 tests successfully.
+My code is not the best, but it passed all the WeThinkCode tests successfully.
 
 ### How does it work?
 
-The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
+The goal is to create a library called libft.a from the source files so I can later use that library from other projects at WeThinkCode.
 
 To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory and finally, call make:
 
@@ -176,7 +176,7 @@ This is a list of my projects that use Libft extensively:
 Enjoy.
 
 [1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
-[2]: http://42.us.org "42 USA"
+[2]: http://WeThinkCode.us.org "WeThinkCode USA"
 [3]: https://github.com/R4meau/libft/wiki/Personal-Functions-Documentation
 [4]: https://github.com/alelievr/libft-unit-test
 [5]: https://github.com/yyang42/moulitest
