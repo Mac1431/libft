@@ -89,8 +89,7 @@ That's it. Now run it using `./a.out`
 
 This is a list of my projects that use Libft extensively:
 
-* [get_next_line](https://github.com/r4meau/get_next_line)
-* [ft_ls](https://github.com/r4meau/ft_ls)
+* [get_next_line](https://github.com/martian1431/gnl)
 
 That's it! If you're having some problems, just [send me a tweet][2].
 
