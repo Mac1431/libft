@@ -92,8 +92,4 @@ This is a list of my projects that use Libft extensively:
 * [get_next_line](https://github.com/r4meau/get_next_line)
 * [ft_ls](https://github.com/r4meau/ft_ls)
 
-## Sponsors
-
-<a href="https://app.codesponsor.io/link/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft" rel="nofollow"><img src="https://app.codesponsor.io/embed/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
-
 Enjoy.
