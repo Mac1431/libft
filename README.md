@@ -9,9 +9,9 @@ My implementation of some of the Standard C Library functions including some add
 * [Example usage](#example-usage)
 
 ### What is libft?
-[Libft] is an individual project at [WeThinkCode_] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+Libft is an individual project at [WeThinkCode_][1] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
-Disclaimer: *Reinventing the wheel is bad, WeThinkCode_ makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At WeThinkCode_ we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
+Disclaimer: *Reinventing the wheel is bad, WeThinkCode_ makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At [WeThinkCode_][1] we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
 ### What's in it?
 
@@ -91,5 +91,10 @@ This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/r4meau/get_next_line)
 * [ft_ls](https://github.com/r4meau/ft_ls)
+
+That's it! If you're having some problems, just [send me a tweet][2].
+
+[1]: https://www.wethinkcode.co.za/
+[2]: https://twitter.com/martian1431
 
 Enjoy.
