@@ -56,23 +56,16 @@ toupper		| 				|
 tolower		| 				| 
 
 
-Notes:
-
-- Most of the the files and function names are namespaced with an **ft** in front. It stands for Fourty Two
-- The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
-- I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
-
 My code is not the best, but it passed all the WeThinkCode tests successfully.
 
 ### How does it work?
 
 The goal is to create a library called libft.a from the source files so I can later use that library from other projects at WeThinkCode.
 
-To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory and finally, call make:
+To create that library, after downloading/cloning this project, **cd** into the project, call make:
 
 	git clone https://github.com/R4meau/libft
 	cd libft
-	make copy
 	make
 
 You should see a *libft.a* file and some object files (.o).
@@ -80,20 +73,18 @@ You should see a *libft.a* file and some object files (.o).
 
 Now to clean up (removing the .o files and the .c files from the root), call `make clean`
 
-**WARNING:** `make clean` will delete all your files from your root directory. Do not run it if you're using the `Makefile` file. This is why I added the `Makefile-sample` file.
 
 ### How do I use the library?
 
-I added an example file called **example.c**, it's using the function **ft_putstr** to print "DON'T PANIC" to the screen. 
+I added an example file called **example.c**, it's using the function **ft_putstr** to print "WeThinkCode_ is doing the most!!!" to the screen. 
 
 If you try to compile it with gcc using `gcc example.c` you will get an *undefined symbol* error for ft_putstr. 
 
-You have to tell the file where your library resides and which library it is using:
+You have to include the library when compiling:
 
-`gcc example.c -L. -lft`
+`gcc example.c libft.a`
 
--L takes the path to your library. `.` in this case<br>
--l takes the name of your library. This is the set of characters that come after `lib` in your library name.
+-libft.a is the library created after running `make`
 
 That's it. Now run it using `./a.out`
 
