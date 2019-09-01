@@ -73,9 +73,6 @@ void	ft_print_lst(t_list *lst)
 		tmp = lst;
 		while (tmp != NULL)
 		{
-//			if (*(int *)tmp->content < 0 || i >= 10)
-//				break ;
-			
 //			ft_putnbr(*(int *)tmp->content);
 //			ft_putnbr(i + 1);
 			printf("Node[%d] = %d\n", i + 1, *(int *)tmp->content);
