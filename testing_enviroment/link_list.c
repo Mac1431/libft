@@ -33,6 +33,30 @@ void	ft_pushfront_node(t_list **lst, void *data)
 	}
 }
 
+/*This fnction inserts a new node at the the back of the current list*/
+
+void	ft_pushback_node(t_list **lst, void *data)
+{
+	t_list *tmp;
+
+	tmp = NULL;
+	if (*lst == NULL)
+	{
+		*lst = ft_create_node(data);
+		return ;
+	}
+	else
+	{
+		tmp = *lst;
+		while (tmp->next != NULL)
+		{
+			tmp = tmp->next;
+		}
+		tmp->next = ft_create_node(data);
+	}
+	
+}
+
 /* This function displays the nodes starting with the Head node */
 					/* To be modified*/
 
@@ -63,18 +87,18 @@ void	ft_print_lst(t_list *lst)
 
 /*This function joins two lists together*/
 
-void	ft_lists_linker(t_list **lst, t_list *head)
+void	ft_lists_linker(t_list **begin_lst, t_list *lst)
 {
 	t_list 	*tmp;
 
 	tmp = NULL;
-	if (*lst == NULL || head == NULL)
+	if (*begin_lst == NULL || lst == NULL)
 		return ;
 	else
 	{
-		tmp = (*lst)->next;
+		tmp = (*begin_lst)->next;
 		while (tmp->next != NULL)
 			tmp = tmp->next;
-		tmp->next = head;
+		tmp->next = lst;
 	}
 }
