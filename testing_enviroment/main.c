@@ -1,79 +1,103 @@
 #include "link_list.h"
+#include <time.h>
 
-void	ft_pushback_node(t_list **lst, void *data)
+/*This function initialize 2D(array) with random number between 0 to 1000
+void	ft_init_tab(int **tab)
 {
-	t_list *tmp;
+	int	i;
+	int	j;
+	int	random_num;
 
-	tmp = NULL;
-	if (*lst == NULL)
+	i = 0;
+	while (i < 3)
 	{
-		*lst = ft_create_node(data);
-		return ;
-	}
-	else
-	{
-		tmp = *lst;
-		while (tmp->next != NULL)
+		j = 0;
+		if (i == 0)
 		{
-			tmp = tmp->next;
+			while (j < 5)
+			{
+				random_num = rand() % 50;
+				tab[i][j] = random_num;
+				j++;
+			}
 		}
-		tmp->next = ft_create_node(data);
+		if (i == 2)
+		{
+			while (j < 5)
+			{
+				random_num = rand() % 100;
+				tab[i][j] = random_num;
+				j++;
+			}
+		}
+		if (i == 3)
+		{
+			while (j < 5)
+			{
+				random_num = rand() % 1000;
+				tab[i][j] = random_num;
+				j++;
+			}
+		}
 	}
-	
-}
+}*/
 
 int		main(void)
 {
 	int		i;
+	int		random_num;
 	int		tab2[5];
 	int		tab[5];
 	int		tab1[5];
-
-	t_list	*head;
+	t_list	*head_list;
 	t_list	*list1;
 	t_list	*list2;
 	
 	list1 = NULL;
-	head = NULL;
+	head_list = NULL;
 	list2 = NULL;
 
-	tab[0] = 42;
-	tab[1] = 66;
-	tab[2] = 11;
-	tab[3] = 2;
-	tab[4] = 34;
-	
-	tab1[0] = 123;
-	tab1[1] = 166;
-	tab1[2] = 111;
-	tab1[3] = 121;
-	tab1[4] = 134;
-
-	tab2[0] = 10342;
-	tab2[1] = 12364;
-	tab2[2] = 154652;
-	tab2[3] = 609386;
-	tab2[4] = 12334;
-
+	srand(time(NULL));
 	i = 0;
 	while (i < 5)
 	{
-		ft_pushfront_node(&head, &tab[i]);
+		random_num = rand() % 50;
+		tab[i] = random_num;
+		i++;
+	}
+	i = 0;
+	while (i < 5)
+	{
+		random_num = rand() % 100;
+		tab1[i] = random_num;
+		i++;
+	}
+	i = 0;
+	while (i < 5)
+	{
+		random_num = rand() % 1000;
+		tab2[i] = random_num;
+		i++;
+	}
+	i = 0;
+	while (i < 5)
+	{
+		ft_pushfront_node(&head_list, &tab[i]);
 		ft_pushback_node(&list1, &tab1[i]);
 		ft_pushback_node(&list2, &tab2[i]);
 		i++;
 	}
 	ft_putstr("\nList[1]:\n\n");
-	ft_print_lst(head);
+	ft_print_lst(head_list);
 	ft_putstr("\nList[2]:\n\n");
 	ft_print_lst(list1);
 	ft_putstr("\nList[3]:\n\n");
 	ft_print_lst(list2);
 	ft_putstr("\nLinked_list[1][2][3]:\n\n");
-	ft_lists_linker(&head, list1);
-	ft_lists_linker(&head, list2);
-	ft_print_lst(head);
+	ft_lists_linker(&head_list, list1);
+	ft_lists_linker(&head_list, list2);
+	ft_print_lst(head_list);
 	free(list1);
-	free(head);
+	free(head_list);
 	return (0);
 }
