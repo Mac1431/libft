@@ -1,4 +1,4 @@
-# Libft - @WeThinkCode_
+# Libft - @WeThinkCode
 My implementation of some of the Standard C Library functions including some additional ones.
 
 ### Table of content
