@@ -42,7 +42,8 @@ void	ft_init_tab(int **tab)
 	}
 }*/
 
-/**/
+/*This funciton moves a node from one list to another*/
+				/*To be modified*/
 void	ft_move_node(t_list **left_lst, t_list **right_lst)
 {
 	t_list *lst1;
@@ -66,10 +67,36 @@ void	ft_move_node(t_list **left_lst, t_list **right_lst)
 	}
 }
 
+/*This function counts how many nodes are there in a list*/
+
+int		ft_lst_count(t_list *lst)
+{
+	int		count;
+
+	count = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
+}
+
+/*This function prints the number of nodes in a*/
+
+void	ft_number_of_nodes(t_list *head)
+{
+	ft_putstr("Number of Nodes in the list -> ");
+	ft_putnbr(ft_lst_count(head));
+	ft_putchar('\n');	
+}
 
 int		main(void)
 {
 	int		i;
+	int		n;
 	int		random_num;
 	int		tab[5] = {100, 200, 300, 400, 500};
 	int		tab1[5] = {10, 20, 30, 40, 50};
@@ -81,6 +108,7 @@ int		main(void)
 	list1 = NULL;
 	head_list = NULL;
 	list2 = NULL;
+	n = 0;
 
 /*
 	srand(time(NULL));
@@ -116,20 +144,24 @@ int		main(void)
 	ft_putendl("\nBefore moving node:");
 	ft_putstr("List[1]:\n\n");
 	ft_print_lst(head_list);
+	ft_number_of_nodes(head_list);
 	ft_putstr("\nList[2]:\n\n");
 	ft_print_lst(list1);
 	ft_move_node(&head_list, &list1);
 	ft_putendl("\nAfter moving node:");
 	ft_putstr("List[1]:\n\n");
 	ft_print_lst(head_list);
+	ft_number_of_nodes(head_list);
 	ft_putstr("\nList[2]:\n\n");
 	ft_print_lst(list1);
-//	ft_putstr("\nList[3]:\n\n");
-//	ft_print_lst(list2);
-//	ft_putstr("\nLinked_list[1][2][3]:\n\n");
-//	ft_lists_linker(&head_list, list1);
-//	ft_lists_linker(&head_list, list2);
-//	ft_print_lst(head_list);
-//	sleep(100);
+	ft_number_of_nodes(list1);
+	ft_putstr("\nList[3]:\n\n");
+	ft_print_lst(list2);
+	ft_number_of_nodes(list1);
+	ft_putstr("\nLinked_list[1][2][3]:\n\n");
+	ft_lists_linker(&head_list, list1);
+	ft_lists_linker(&head_list, list2);
+	ft_print_lst(head_list);
+	ft_number_of_nodes(head_list);
 	return (0);
 }
