@@ -33,9 +33,11 @@ void	ft_init_tab(int *tab1, int *tab2, int *tab3)
 
 }
 
-int		main(void)
+/*Single link list*/
+
+void	ft_single_link_list(void)
 {
-	int		i;
+		int		i;
 	int		tab1[5];
 	int		tab2[5];
 	int		tab3[5];
@@ -78,5 +80,11 @@ int		main(void)
 	ft_lists_linker(&head_list, list2);
 	ft_print_lst(head_list);
 	ft_number_of_nodes(head_list);
+	return ;
+}
+
+int		main(void)
+{
+	ft_single_link_list();
 	return (0);
 }
