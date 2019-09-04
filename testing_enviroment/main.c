@@ -1,106 +1,44 @@
 #include "link_list.h"
 #include <time.h>
 
-/*This function initialize 2D(array) with random number between 0 to 1000
-void	ft_init_tab(int **tab)
+/*This function initialize (array) with random number between 0 to 1000*/
+				/*To be modified*/
+void	ft_init_tab(int *tab1, int *tab2, int *tab3)
 {
 	int	i;
-	int	j;
 	int	random_num;
 
 	i = 0;
-	while (i < 3)
+	srand(time(NULL));
+	while (i < 5)
 	{
-		j = 0;
-		if (i == 0)
-		{
-			while (j < 5)
-			{
-				random_num = rand() % 50;
-				tab[i][j] = random_num;
-				j++;
-			}
-		}
-		if (i == 2)
-		{
-			while (j < 5)
-			{
-				random_num = rand() % 100;
-				tab[i][j] = random_num;
-				j++;
-			}
-		}
-		if (i == 3)
-		{
-			while (j < 5)
-			{
-				random_num = rand() % 1000;
-				tab[i][j] = random_num;
-				j++;
-			}
-		}
+		random_num = rand() % 50;
+		tab1[i] = random_num;
+		i++;
 	}
-}*/
-
-/*This funciton moves a node from one list to another*/
-				/*To be modified*/
-void	ft_move_node(t_list **left_lst, t_list **right_lst)
-{
-	t_list *lst1;
-	t_list *lst2;
-	t_list *tmp1;
-	t_list *tmp2;
-	
-	lst1 = *right_lst;
-	lst2 = *left_lst;
-	tmp1 = NULL;
-	tmp2 = NULL;
-	if (right_lst == NULL || left_lst == NULL)
-		return ;
-	else
+	i = 0;
+	while (i < 5)
 	{
-		tmp1 = lst1->next;
-		tmp2 = lst1;
-		tmp2->next = lst2;
-		*right_lst = tmp1;
-		*left_lst = tmp2;
+		random_num = rand() % 100;
+		tab2[i] = random_num;
+		i++;
 	}
-}
-
-/*This function counts how many nodes are there in a list*/
-
-int		ft_lst_count(t_list *lst)
-{
-	int		count;
-
-	count = 0;
-	if (!lst)
-		return (0);
-	while (lst)
+	i = 0;
+	while (i < 5)
 	{
-		count++;
-		lst = lst->next;
+		random_num = rand() % 1000;
+		tab3[i] = random_num;
+		i++;
 	}
-	return (count);
-}
 
-/*This function prints the number of nodes in a*/
-
-void	ft_number_of_nodes(t_list *head)
-{
-	ft_putstr("Number of Nodes in the list -> ");
-	ft_putnbr(ft_lst_count(head));
-	ft_putchar('\n');	
 }
 
 int		main(void)
 {
 	int		i;
-	int		n;
-	int		random_num;
-	int		tab[5] = {100, 200, 300, 400, 500};
-	int		tab1[5] = {10, 20, 30, 40, 50};
+	int		tab1[5];
 	int		tab2[5];
+	int		tab3[5];
 	t_list	*head_list;
 	t_list	*list1;
 	t_list	*list2;
@@ -108,37 +46,14 @@ int		main(void)
 	list1 = NULL;
 	head_list = NULL;
 	list2 = NULL;
-	n = 0;
 
-/*
-	srand(time(NULL));
+	ft_init_tab(tab1, tab2, tab3);
 	i = 0;
 	while (i < 5)
 	{
-		random_num = rand() % 50;
-		tab[i] += random_num;
-		i++;
-	}
-	i = 0;
-	while (i < 5)
-	{
-		random_num = rand() % 100;
-		tab1[i] = random_num;
-		i++;
-	}*/
-	i = 0;
-	while (i < 5)
-	{
-		random_num = rand() % 1000;
-		tab2[i] = random_num;
-		i++;
-	}
-	i = 0;
-	while (i < 5)
-	{
-		ft_pushfront_node(&head_list, &tab[i]);
-		ft_pushback_node(&list1, &tab1[i]);
-		ft_pushback_node(&list2, &tab2[i]);
+		ft_pushfront_node(&head_list, &tab1[i]);
+		ft_pushback_node(&list1, &tab2[i]);
+		ft_pushback_node(&list2, &tab3[i]);
 		i++;
 	}
 	ft_putendl("\nBefore moving node:");
@@ -157,7 +72,7 @@ int		main(void)
 	ft_number_of_nodes(list1);
 	ft_putstr("\nList[3]:\n\n");
 	ft_print_lst(list2);
-	ft_number_of_nodes(list1);
+	ft_number_of_nodes(list2);
 	ft_putstr("\nLinked_list[1][2][3]:\n\n");
 	ft_lists_linker(&head_list, list1);
 	ft_lists_linker(&head_list, list2);

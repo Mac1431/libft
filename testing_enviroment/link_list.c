@@ -99,3 +99,46 @@ void	ft_lists_linker(t_list **begin_lst, t_list *lst)
 		tmp->next = lst;
 	}
 }
+
+/*This funciton moves a node from one list to another list*/
+
+void	ft_move_node(t_list **lst1, t_list **lst2)
+{
+	t_list	*tmp;
+
+	if (*lst2 == NULL || *lst1 == NULL)
+		return ;
+	else
+	{
+		tmp = *lst1;
+		*lst1 = (*lst1)->next;
+		tmp->next = *lst2;
+		*lst2 = tmp;
+	}
+}
+
+/*This function counts how many nodes are there in a list*/
+
+int		ft_lst_count(t_list *lst)
+{
+	int		count;
+
+	count = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
+}
+
+/*This function prints the number of nodes in a list*/
+
+void	ft_number_of_nodes(t_list *head)
+{
+	ft_putstr("Number of Nodes in the list -> ");
+	ft_putnbr(ft_lst_count(head));
+	ft_putchar('\n');	
+}
